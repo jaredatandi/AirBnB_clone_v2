@@ -60,5 +60,4 @@ Ex:
 ---
 
 ## Authors
-* **Derrick Gee** - [kai-dg](https://github.com/kai-dg)
-* **Connor Brereton** - [ConnorBrereton](https://github.com/ConnorBrereton)
+* **Jared Atandi** *- [Jared Atandi](https://github.com/jaredatandi)
