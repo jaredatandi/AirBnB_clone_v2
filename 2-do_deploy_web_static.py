@@ -4,9 +4,9 @@ import os
 from datetime import datetime
 from fabric.api import *
 
-env.hosts = ["34.73.5.42", " 34.73.70.108"]
+env.hosts = ["54.160.67.40", "100.26.235.177"]
 env.user = "ubuntu"
-env.key_filename = "~/.ssh/holberton"
+env.key_filename = "~/.ssh/id_rsa"
 env.warn_only = True
 
 
