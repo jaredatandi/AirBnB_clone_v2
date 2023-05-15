@@ -1,5 +1,11 @@
 #!/usr/bin/python3
-"""Flask"""
+"""Flask
+
+    Returns:
+        text: c_route resolution
+"""
+
+
 from flask import Flask
 app = Flask(__name__)
 app.url_map.merge_slashes = False
