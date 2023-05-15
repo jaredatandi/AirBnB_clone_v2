@@ -1,46 +1,46 @@
 #!/usr/bin/python3
 """Flask"""
+
+
 from flask import Flask, render_template
 app = Flask(__name__)
+app.url_map.strict_slashes = False
 
 
-@app.route('/', strict_slashes=False)
-def hello_route():
-    """hello_route"""
-    return "Hello HBNB!"
+@app.route('/')
+def hello():
+    """hello"""
+    return 'Hello HBNB!'
 
 
-@app.route('/hbnb', strict_slashes=False)
+@app.route('/hbnb')
 def hbnb():
-    """hbnb"""
-    return "HBNB"
+    return 'HBNB'
 
 
-@app.route('/c/<text>', strict_slashes=False)
+@app.route('/c/<text>')
 def c_route(text):
-    """c_route"""
-    return "C {}".format(text.replace("_", " "))
+    f_text = text.replace('_', ' ')
+    return "C %s" % f_text
 
 
-@app.route('/python', strict_slashes=False)
-@app.route('/python/<text>', strict_slashes=False)
-def python_route(text="is cool"):
-    """python_route"""
-    return "Python {}".format(text.replace("_", " "))
+@app.route('/python/', defaults={'text': 'is cool'})
+@app.route('/python/<text>')
+def defaults_p(text):
+    f_text2 = text.replace('_', ' ')
+    return "Python %s" % f_text2
 
 
-@app.route('/number/<int:n>', strict_slashes=False)
-def number_route(n):
-    """number_route"""
+@app.route('/number/<int:n>')
+def check_number(n):
     if isinstance(n, int):
-        return "{} is a number".format(n)
+        return "%d is a number" % n
 
 
-@app.route('/number_template/<int:n>', strict_slashes=False)
-def number_template(n=None):
-    """number_template"""
+@app.route('/number_template/<int:n>')
+def number_template(n):
     if isinstance(n, int):
-        return render_template("5-number.html", n=n)
+        return render_template('5-number.html', n=n)
 
 
 if __name__ == "__main__":
