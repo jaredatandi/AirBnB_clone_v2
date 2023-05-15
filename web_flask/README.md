@@ -65,4 +65,4 @@ What you should learn from this project:
 ---
 
 ## Author
-* **Jared Atandi** - [kai-dg](https://github.com/jaredatandi)
+* **Jared Atandi** - [keago](https://github.com/jaredatandi)
