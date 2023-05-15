@@ -16,6 +16,7 @@ def hbnb():
 
 @app.route('/c/<text>')
 def text(text):
+    text.replace('_', ' ')
     return  'C %s' % escape(text)
 
 
